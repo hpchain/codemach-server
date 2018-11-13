@@ -1,0 +1,35 @@
+{
+  "name": "bumo-contract-editor-service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "DEBUG=service:* NODE_ENV=production pm2 start --name contract-editor-service ./index.js",
+    "dev": "DEBUG=service:* supervisor ./index.js",
+    "test": "mocha"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "bignumber.js": "^7.2.1",
+    "body-parser": "^1.17.2",
+    "bumo-sdk": "^2.1.0",
+    "co": "^4.6.0",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "md5-file": "^4.0.0",
+    "axios": "^0.18.0",
+    "morgan": "~1.8.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
