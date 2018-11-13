@@ -1,6 +1,6 @@
 {
   "name": "bumo-contract-editor-service",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "DEBUG=service:* NODE_ENV=production pm2 start --name contract-editor-service ./index.js",
