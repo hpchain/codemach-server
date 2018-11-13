@@ -13,7 +13,6 @@ module.exports = {
   },
   // Nginx proxy domain or host
   domain: '127.0.0.1:3002',
-
-  // privatekey for sandbox environment
+  // private key for sandbox environment
   privateKey: 'privC17CRRAjNvELrfbTFbLJstyGxk3unpPkRZCZoXRz13WEpN5SiHn8'
 }

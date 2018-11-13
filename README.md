@@ -1,14 +1,31 @@
 
 ## 合约编辑器服务端管理及部署
 
-### 根据实际情况修改配置文件（config.js）
+#### 修改配置文件（config.js）
+
+```js
+{
+  // 当前服务的监听端口
+  port: '3000',
+  // 协议: http:// 或者 https://
+  protocol: 'http://',
+  host: {
+    // 生产环境主机地址(包含端口)
+    production: 'seed1.bumo.io:16002',
+    // 测试环境主机地址(包含端口)
+    development: 'seed1.bumotest.io:26002',
+    // 沙箱环境主机地址(包含端口)
+    sandbox: '127.0.0.1:36002'
+  },
+  // Nginx代理之后的域名或主机地址(包含端口)
+  domain: '127.0.0.1:3002',
+  // 沙箱环境私钥
+  privateKey: 'privC17CRRAjNvELrfbTFbLJstyGxk3unpPkRZCZoXRz13WEpN5SiHn8'
+}
 
 ```
-1. 修改当前域名, 需要将 config.js 文件中的domain 修改为当前域名，如： 'cme.bumo.io'
-2. 如果需要https支持，需要将 config.js 文件中的protocol 修改为 'https://'
-```
 
-### 合约编辑器服务端启动及管理
+#### 合约编辑器服务端启动及管理
 > 如果服务器上没有安装pm2, 请先安装pm2
 
 ```bash
@@ -38,7 +55,7 @@ $ pm2 restart contract-editor-service
 $ pm2 log contract-editor-service
 ```
 
-### Nginx代理配置
+#### Nginx代理配置
 
 ``` nginx
 # in the server {} configuration block
