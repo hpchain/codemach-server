@@ -1,6 +1,6 @@
 'use strict'
 
-const encryption = require('bumo-encryption')
+const encryption = require('hpchain-encryption')
 const { promisify } = require('util')
 const fs = require('fs')
 const readdirAsync = promisify(fs.readdir)
